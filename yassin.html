@@ -3,32 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Yassin</title>
+    <title>iTREST - Services</title>
     <style>
-        /* CSS for Yassin Page */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Courier New; sans-serif; color: #333; }
-        header { font-style: italic; display: flex; align-items: center; justify-content: space-between; background-color: #4CAF50; color: white; padding: 10px 20px; }
-        header img { width: 130px; height: auto; }
-        footer { background-color: #f4f4f4; color: #666; text-align: center; padding: 20px; font-style: italic; margin-top: 20px; }
-        section { padding: 20px; text-align: center; }
-        h2 { color: #4CAF50; font-size: 28px; } /* Increased font size for heading */
+        /* Global CSS */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body { 
+            font-family: "Courier New", sans-serif; 
+			background-color: #E5FFE5;
+            color: #333; 
+        }
+
+        /* Header Styling */
+        header {  
+            display: flex; 
+            align-items: center;
+			justify-content: space-between;
+            background-color: #66FF66; 
+            color: white; 
+            padding: 20px;
+        }
+
+        img[alt="iTREST Logo"] { 
+			width: 130px; 
+			height: auto; 
+		}
+		
+		img[alt="balloon"] {
+			width: 150px;
+			height: auto;
+			margin: 0 250px;
+			position: absolute;
+		}
+		
+		img[alt="balloon2"] {
+			width: 150px;
+			height: auto;
+			margin: 0 1150px;
+			position: absolute;
+		}
+        
+        .header-text {
+            display: flex;
+            flex-direction: column; /* Stack <h1> and <p> vertically */
+            justify-content: center; /* Center text vertically */
+            text-align: center; /* Center text within the container */
+            flex: 1; /* Take up the remaining space in the header */
+        }
+        
+        h1 {
+            margin-right: 100px;
+			color: #0d00ff;
+        }
+        
+        header p {
+            font-style: italic;
+			color: #0d00ff;
+			font-weight: bold;
+        }
+
+        /* Navigation Styling */
+        nav { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            background-color: #333; 
+            padding: 10px 0; 
+        }
+        
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            transition: background 0.3s; 
+        }
+        
+        nav a:hover { 
+            background-color: #66FF66; 
+        }
+
+        /* Section Styling */
+        section { 
+            padding: 20px; 
+            text-align: center;
+        }
+        
+        h2 { 
+            color: #0d00ff;
+            line-height: 1.6;
+        }
+        
         p {
-            font-size: 18px; /* Increased font size for paragraphs */
-            line-height: 1.6; /* Improved line height for better readability */
+            line-height: 1.6;
         }
-        .back-button {
-            display: inline-block; /* Make it like a button */
-            padding: 10px 20px; /* Add padding for better appearance */
-            background-color: #f44336; /* Red background color */
-            color: white; /* Text color */
-            text-decoration: none; /* Remove underline */
-            border-radius: 5px; /* Rounded corners */
-            margin-top: 20px; /* Space above */
-            transition: background 0.3s; /* Smooth transition for hover */
-        }
-        .back-button:hover {
-            background-color: #d32f2f; /* Darker red on hover */
+		
+		section img { 
+			width: 300px; 
+			height: auto; 
+			padding-top: 50px;
+		} 
+
+        /* Footer Styling */
+        footer { 
+            background-color: #CCFFCC; 
+            color: #666; 
+            text-align: center; 
+            padding: 20px; 
+            font-style: italic; 
         }
     </style>
 </head>
@@ -36,18 +121,28 @@
 
     <!-- Header Section with Logo -->
     <header>
-        <img src="https://i.imgur.com/JX5FZhP.jpeg" alt="iTREST Logo">
-        <h1>iTREST</h1>
+        <img src="https://i.imgur.com/UXegbeP.png" alt="iTREST Logo">
+		<img src="https://i.imgur.com/4WPoinI.png" alt="balloon">
+		<img src="https://i.imgur.com/Nt0cLn9.png" alt="balloon2">
+        <div class="header-text">
+            <h1>iTREST</h1>
+            <p>Helping Young Entrepreneurs Make Their Dreams a Reality</p>
+        </div>
     </header>
 
-    <!-- About Yassin Content -->
-    <section id="yassin">
-        <h2>Hey, I’m Yassin!</h2>
-        <p>Hey, I’m Yassin, and I’m 12! Ever since I was little, I was fired up by seeing young entrepreneurs make things happen. I jumped in by selling at school fairs, and it just kept growing! I’ve managed to keep my little business moving strong and smart, and now, I want to reach even more people.</p>
-        <p>But it’s not just about my story. I want to help other young entrepreneurs like you get out there and do what you’re passionate about. I know what it’s like when people think you’re too young to have big ideas. But guess what? When I shared my plans and showed them what I could do, they were blown away! Now, I want you to have that same moment.</p>
-        
-        <!-- Back Button -->
-        <a href="iTREST 2.html" class="back-button">Back to About Us</a>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="iTREST 2.html">About Us</a>
+        <a href="iTREST 3.html">Services</a>
+        <a href="iTREST 4.html">Contact</a>
+    </nav>
+
+    <!-- Services Content -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>iTREST provides tools, mentoring, and guidance for young entrepreneurs to make their ideas a reality.</p>
+		<img src="https://mummyandchild.com/wp-content/uploads/2020/06/Entrepreneur-kid.jpg">
     </section>
 
     <!-- Footer -->
