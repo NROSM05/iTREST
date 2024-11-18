@@ -4,167 +4,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iTREST - Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset and Basic Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Courier New", sans-serif; 
+			background-color: #FFE5F0;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {  
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            background-color: #FF66B3; 
+            color: white; 
+            padding: 20px; 
+        }
+
+        img[alt="iTREST Logo"] { 
+			width: 130px; 
+			height: auto; 
+		}
+		
+		img[alt="balloon"] {
+			width: 150px;
+			height: auto;
+			margin: 0 250px;
+			position: absolute;
+		}
+		
+		img[alt="balloon2"] {
+			width: 150px;
+			height: auto;
+			margin: 0 1150px;
+			position: absolute;
+		}
+        
+        .header-text {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            text-align: center; 
+            flex: 1; 
+        }
+        
+        h1 {
+            margin-right: 100px;
+			color: #0d00ff;
+        }
+        
+        header p {
+            font-style: italic;
+			color: #0d00ff;
+			font-weight: bold;
+        }
+
+        /* Navigation Styling */
+        nav {
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            background-color: #333; 
+            padding: 10px 0; 
+        }
+
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            font-size: 1.1rem; 
+            transition: background 0.3s; 
+        }
+
+        nav a:hover { 
+            background-color: #FF66B3; 
+        }
+
+        /* Section Styling */
+        section { 
+            padding: 20px; 
+            text-align: center; 
+        }
+		
+		section p {
+			padding: 20px;
+		}
+
+        h2 { 
+            color: #0d00ff; 
+            margin-bottom: 10px; 
+        }
+
+        /* Form Styling */
+        form {
+            max-width: 400px; 
+            margin: 0 auto; 
+            text-align: left; 
+        }
+
+        form label, form input, form textarea {
+            display: block; 
+            width: 100%; 
+            margin-bottom: 10px; 
+        }
+
+        form input, form textarea {
+            padding: 10px; 
+            font-size: 1rem; 
+        }
+
+        form input[type="submit"] {
+            background-color: #FF66B3; 
+            color: #fff; 
+            border: none; 
+            cursor: pointer; 
+            transition: background 0.3s; 
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #FF4D94; 
+        }
+
+        /* Footer Styling */
+        footer { 
+            background-color: #FFB3D9; 
+            color: #666; 
+            text-align: center; 
+            padding: 20px; 
+            font-style: italic; 
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+		
+		.clickable-text {
+			color: blue; /* Change the text color */
+			cursor: pointer; /* Show pointer on hover */
+			text-decoration: none; /* Remove underline */
+			transition: text-decoration 0.3s; /* Smooth transition */
+		}
+
+		.clickable-text:hover {
+			text-decoration: underline; /* Underline on hover */
+		}
+
+    </style>
 </head>
 <body>
 
-<header>
-    <img src="https://i.imgur.com/JX5FZhP.jpeg" alt="Itrest Logo">
-    <h1>iTREST</h1>
-</header>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="iTREST 2.html">About Us</a>
-    <a href="iTREST 3.html">Services</a>
-    <a href="iTREST 4.html">Contact</a>
-</nav>
-<style>
-header img {
-    width: 100px; /* Adjust to make the logo smaller */
-    height: auto; /* Keeps the aspect ratio */
-}
+    <!-- Header Section with Logo -->
+    <header>
+        <img src="https://i.imgur.com/UXegbeP.png" alt="iTREST Logo">
+		<img src="https://i.imgur.com/4WPoinI.png" alt="balloon">
+		<img src="https://i.imgur.com/Nt0cLn9.png" alt="balloon2">
+        <div class="header-text">
+            <h1>iTREST</h1>
+            <p>Helping Young Entrepreneurs Make Their Dreams a Reality</p>
+        </div>
+    </header>
 
-/* Reset and Basic Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="iTREST 2.html">About Us</a>
+        <a href="iTREST 3.html">Services</a>
+        <a href="iTREST 4.html">Contact</a>
+    </nav>
 
-body {
-    font-family: Courier New; sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
+    <!-- Contact Section Content -->
+    <section>
+		<h2>Contact Us</h2>
+			<p>Feel free to reach out for more information!</p>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name"><br><br>
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email"><br><br>
+			<label for="message">Message:</label><br>
+			<textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+			<input type="submit" value="Send">
+        
+				<p>Email: <a href="mailto:info@itrest.com" class="clickable-text"><u>info@itrest.com</u></a></p>
+				<p>Phone: <a href="tel:+1234567890" class="clickable-text"><u>+44 07936 768104</u></a></p>
+				<p>We look forward to hearing from you!</p>
+		</form>
+	</section>
 
-/* Header Styling */
-header {
-	font-style: italic;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-}
 
-header img {
-    width: 130px;
-    height: auto;
-}
-
-header h1 {
-    font-size: 1.8rem;
-}
-
-header p {
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-
-/* Navigation Styling */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: #333;
-    padding: 10px 0;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 1.1rem;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background-color: #4CAF50;
-}
-
-/* Section Styling */
-section {
-    padding: 20px;
-    text-align: center;
-}
-
-h2 {
-    color: #4CAF50;
-    margin-bottom: 10px;
-}
-
-/* Form Styling */
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-form label, form input, form textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    font-size: 1rem;
-}
-
-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-form input[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #f4f4f4;
-    color: #666;
-    text-align: center;
-    padding: 20px;
-    font-style: italic;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-</style>
-<section>
-    <h2>Contact Us</h2>
-    <p>Feel free to reach out for more information!</p>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-        <input type="submit" value="Send">
-    </form>
-</section>
-<footer>
-    <p>Inspire Youth, Creating Leaders, Building Legacies</p>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p>Inspire Youth, Creating Leaders, Building Legacies</p>
+    </footer>
 
 </body>
 </html>
