@@ -26,6 +26,7 @@
             background-color: #FF5733; 
             color: white; 
             padding: 20px; 
+            position: relative; /* Ensures the balloons are positioned relative to the header */
         }
 		
 		header p { 
@@ -40,15 +41,17 @@
 		img[alt="balloon"] {
 			width: 150px;
 			height: auto;
-			margin: 0 250px;
 			position: absolute;
+			top: 10px; /* Adjust to place the balloons slightly below the top */
+			left: 10%; /* Align to the left with some margin */
 		}
 		
 		img[alt="balloon2"] {
 			width: 150px;
 			height: auto;
-			margin: 0 1150px;
 			position: absolute;
+			top: 10px; /* Adjust for both balloons to have the same distance from the top */
+			right: 10%; /* Align to the right with some margin */
 		}
 		
         .header-text {
@@ -112,10 +115,14 @@
                 flex-direction: column; /* Stack logo and text vertically */
                 align-items: center;
                 padding: 15px;
+                position: relative; /* Keeps balloon images positioned relative to header */
             }
 
             header img[alt="balloon"], header img[alt="balloon2"] {
-                margin: 0 20px; /* Adjust balloon positions for mobile */
+                top: 10px; /* Keeps balloons in place without overlapping text */
+                left: 5%; /* Adjust balloon positions for mobile */
+                right: 5%; /* Adjust balloon positions for mobile */
+                width: 120px; /* Resize for smaller screens */
             }
 
             header p {
