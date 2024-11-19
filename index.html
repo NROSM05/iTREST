@@ -12,12 +12,12 @@
 		
 		h1 { 
 			margin-right: 100px; 
-			}
+		}
 			
         body { 
-			font-family: Courier New; sans-serif; color: #333; 
+			font-family: Courier New, sans-serif; color: #333; 
 			background-color: #FFE5E5;
-			}
+		}
 			
         header {  
             display: flex; 
@@ -30,7 +30,7 @@
 		
 		header p { 
 			font-style: italic; 
-			}
+		}
 			
         img[alt="iTREST Logo"] { 
 			width: 130px; 
@@ -71,7 +71,7 @@
 			gap: 20px; 
 			background-color: #333;
 			padding: 10px 0; 
-			}
+		}
 			
         nav a { 
 			color: #fff; 
@@ -87,7 +87,7 @@
         section { 
 			padding: 20px;
 			text-align: center; 
-			}
+		}
 			
         h2 { 
             color: #FF5733; 
@@ -105,7 +105,43 @@
 			padding: 20px; 
 			font-style: italic; 
 		}
-		
+
+        /* Mobile responsive styles */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack logo and text vertically */
+                align-items: center;
+                padding: 15px;
+            }
+
+            header img[alt="balloon"], header img[alt="balloon2"] {
+                display: none; /* Remove the balloons for mobile */
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            nav {
+                flex-direction: column; /* Stack navigation links vertically */
+                padding: 10px 0;
+            }
+
+            nav a {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+
+            section img {
+                width: 100%; /* Make the image full width on mobile */
+                padding-top: 20px;
+            }
+
+            footer {
+                font-size: 14px;
+                padding: 15px 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -113,8 +149,8 @@
     <!-- Header Section with Logo -->
     <header>
         <img src="https://i.imgur.com/UXegbeP.png" alt="iTREST Logo">
-		<img src="https://i.imgur.com/4WPoinI.png" alt="balloon">
-		<img src="https://i.imgur.com/Nt0cLn9.png" alt="balloon2">
+        <img src="https://i.imgur.com/4WPoinI.png" alt="balloon">
+        <img src="https://i.imgur.com/Nt0cLn9.png" alt="balloon2">
         <div class="header-text">
             <h1>iTREST</h1>
             <p>Helping Young Entrepreneurs Make Their Dreams a Reality</p>
@@ -133,7 +169,7 @@
     <section id="home">
         <h2>What We Do?</h2>
         <p>At iTREST, we help young entrepreneurs bring their business ideas to life through tools, guidance, and a step-by-step approach.</p>
-		<img src="https://media.licdn.com/dms/image/C5612AQHnyKVgYKK3Sg/article-cover_image-shrink_600_2000/0/1520043101373?e=2147483647&v=beta&t=g0cVmL9EBDHNzD8jYIyY2Ur59_sx41emt6TxpROjcMk">
+        <img src="https://media.licdn.com/dms/image/C5612AQHnyKVgYKK3Sg/article-cover_image-shrink_600_2000/0/1520043101373?e=2147483647&v=beta&t=g0cVmL9EBDHNzD8jYIyY2Ur59_sx41emt6TxpROjcMk">
     </section>
 
     <!-- Footer -->
