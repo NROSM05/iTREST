@@ -118,19 +118,19 @@
                 position: relative; /* Keeps balloon images positioned relative to header */
             }
 
-            header img[alt="balloon"] {
+            header img[alt="balloon"], header img[alt="balloon2"] {
                 top: 10px; /* Keeps balloons in place without overlapping text */
-                left: 5%; /* Adjust balloon positions for mobile */
-                right: 5%; /* Adjust balloon positions for mobile */
                 width: 120px; /* Resize for smaller screens */
             }
 
-	    header img[alt="balloon2"] {
-		top: 10px;
-		left: 5%;
-		right: 50%;
-		width: 120px;
-	    }
+            /* Position the first balloon to the left and second balloon to the right */
+            header img[alt="balloon"] {
+                left: 5%; /* Left position for the first balloon */
+            }
+
+            header img[alt="balloon2"] {
+                right: 5%; /* Right position for the second balloon */
+            }
 
             header p {
                 font-size: 18px;
