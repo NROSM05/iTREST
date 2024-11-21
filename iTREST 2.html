@@ -19,22 +19,25 @@
 			}
 
         header {  
-            display: flex; 
-            align-items: center; /* Center items vertically */
-            justify-content: space-between; /* Space between logo and text */
-            background-color: #33B5FF; 
-            color: white; 
-            padding: 20px; 
-	    position: relative;
-        }
+    display: flex; 
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and text */
+    background-color: #33B5FF; 
+    color: white; 
+    padding: 15px 20px; /* Reduce padding to minimize the vertical gap */
+    position: relative;
+}
 		
-		h1 { 
-			margin-right: 100px; 
-			}
+		h1 {
+    margin: 0; /* Remove default margins */
+    font-size: 2em; /* Adjust font size if necessary */
+}
 		
-		header p { 
-			font-style: italic; 
-			}
+		header p {
+    margin: 0; /* Remove unnecessary spacing */
+    font-style: italic;
+    font-size: 1em; /* Adjust font size if necessary */
+}
 			
         img[alt="iTREST Logo"] { 
 			width: 130px; 
@@ -57,13 +60,14 @@
 			right: 10%; /* Align to the right with some margin */
 		}
         
-        .header-text {
-            display: flex;
-            flex-direction: column; /* Stack <h1> and <p> vertically */
-            justify-content: center; /* Center text vertically */
-            text-align: center; /* Center text within the container */
-            flex: 1; /* Take up the remaining space in the header */
-        }
+       .header-text {
+    display: flex;
+    flex-direction: column; /* Stack <h1> and <p> vertically */
+    justify-content: center; /* Center text vertically */
+    text-align: center; /* Center text within the container */
+    flex: 1; /* Take up the remaining space in the header */
+    padding: 10px 0; /* Adjust padding to fine-tune spacing */
+}
         
         nav { 
             display: flex; 
