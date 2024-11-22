@@ -173,6 +173,22 @@ img[alt="balloon"], img[alt="balloon2"] {
             font-style: italic; 
         }
 
+	    .service-cards {
+    display: flex;              /* Enables Flexbox for horizontal alignment */
+    justify-content: center;    /* Centers the cards within the container */
+    gap: 20px;                  /* Adds space between the cards */
+    flex-wrap: wrap;            /* Allows cards to wrap to the next line if needed */
+    margin-top: 20px;
+}
+
+.service-card {
+    width: 200px;               /* Ensures all cards have the same width */
+    height: 200px;
+    perspective: 1000px;
+    margin: 0 auto;             /* Centers the cards horizontally if needed */
+}
+
+
 	    @media screen and (max-width: 768px) {
             header {
                 flex-direction: column; /* Stack logo and text vertically */
@@ -189,6 +205,16 @@ img[alt="balloon"], img[alt="balloon2"] {
                 top: 10px; /* Keeps balloons in place without overlapping text */
                 width: 120px; /* Resize for smaller screens */
             }
+
+		     .service-cards {
+        flex-direction: column;  /* Stacks cards vertically */
+        align-items: center;     /* Centers the cards */
+    }
+
+    .service-card {
+        margin-bottom: 20px;    /* Adds spacing between stacked cards */
+    }
+}
 
             /* Position the first balloon to the left and second balloon to the right */
             header img[alt="balloon"] {
@@ -281,7 +307,7 @@ img[alt="balloon"], img[alt="balloon2"] {
             <h3>Pack 3: Kidpreneur Marketing Pro</h3>
 		</div>
         <div class="card-back">
-            <p></p>Guiding young entrepreneurs in promoting and marketing their businesses effectively. <b>Starting at <u>£10</u></b>.</p>
+            <p>Guiding young entrepreneurs in promoting and marketing their businesses effectively. <b>Starting at <u>£10</u></b>.</p>
 		</div>
     </div>
 </div>
