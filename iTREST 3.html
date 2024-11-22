@@ -11,10 +11,62 @@
             padding: 0; 
             box-sizing: border-box; 
         }
-        
+
+	    .service-card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 20px auto;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.service-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #66FF66;
+    color: #333;
+    border: 2px solid #0d00ff;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #0d00ff;
+    color: white;
+}
+
+
+	    nav a:hover { 
+            background-color: #66FF66; 
+        }
+
+@keyframes float {
+    0%, 100% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+}
+
+img[alt="balloon"], img[alt="balloon2"] {
+    animation: float 3s ease-in-out infinite;
+}
+
+	    
         body { 
             font-family: "Courier New", sans-serif; 
-            background-color: #E5FFE5;
+			background-color: #E5FFE5;
             color: #333; 
         }
 
@@ -22,34 +74,50 @@
         header {  
             display: flex; 
             align-items: center;
-            justify-content: space-between;
+			justify-content: space-between;
             background-color: #66FF66; 
             color: white; 
             padding: 20px;
         }
 
         img[alt="iTREST Logo"] { 
-            width: 130px; 
-            height: auto; 
-        }
+			width: 130px; 
+			height: auto; 
+		}
+		
+		img[alt="balloon"] {
+			width: 150px;
+			height: auto;
+			position: absolute;
+			top: 10px;
+			left: 10%;
+		}
+		
+		img[alt="balloon2"] {
+			width: 150px;
+			height: auto;
+			position: absolute;
+			top: 10px;
+			right: 10%;
+		}
         
         .header-text {
             display: flex;
-            flex-direction: column; 
-            justify-content: center;
-            text-align: center; 
-            flex: 1; 
+            flex-direction: column; /* Stack <h1> and <p> vertically */
+            justify-content: center; /* Center text vertically */
+            text-align: center; /* Center text within the container */
+            flex: 1; /* Take up the remaining space in the header */
         }
         
         h1 {
             margin-right: 100px;
-            color: #0d00ff;
+			color: #0d00ff;
         }
         
         header p {
             font-style: italic;
-            color: #0d00ff;
-            font-weight: bold;
+			color: #0d00ff;
+			font-weight: bold;
         }
 
         /* Navigation Styling */
@@ -68,9 +136,12 @@
             transition: background 0.3s; 
         }
         
-        nav a:hover { 
-            background-color: #66FF66; 
-        }
+        nav a:hover {
+    background-color: #66FF66;
+    transform: scale(1.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
 
         /* Section Styling */
         section { 
@@ -86,56 +157,12 @@
         p {
             line-height: 1.6;
         }
-        
-        /* Service Cards */
-        .service-cards {
-            display: flex;              /* Enables Flexbox for horizontal alignment */
-            justify-content: center;    /* Centers the cards */
-            gap: 20px;                  /* Space between cards */
-            flex-wrap: wrap;            /* Wraps cards to the next line if necessary */
-            margin-top: 20px;
-        }
-
-        .service-card {
-            width: 200px;               /* Ensures consistent card width */
-            height: 200px;
-            perspective: 1000px;        /* Perspective for 3D animation */
-        }
-
-        .card-inner {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.6s;
-        }
-
-        .service-card:hover .card-inner {
-            transform: rotateY(180deg);
-        }
-
-        .card-front, .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-
-        .card-front {
-            background-color: #CCFFCC;
-        }
-
-        .card-back {
-            background-color: #66FF66;
-            transform: rotateY(180deg);
-        }
+		
+		section img { 
+			width: 300px; 
+			height: auto; 
+			padding-top: 50px;
+		} 
 
         /* Footer Styling */
         footer { 
@@ -146,15 +173,80 @@
             font-style: italic; 
         }
 
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .service-cards {
-                flex-direction: column;
+	    .service-cards {
+    display: flex;              /* Enables Flexbox for horizontal alignment */
+    justify-content: center;    /* Centers the cards within the container */
+    gap: 20px;                  /* Adds space between the cards */
+    flex-wrap: wrap;            /* Allows cards to wrap to the next line if needed */
+    margin-top: 20px;
+}
+
+.service-card {
+    width: 200px;               /* Ensures all cards have the same width */
+    height: 200px;
+    perspective: 1000px;
+    margin: 0 auto;             /* Centers the cards horizontally if needed */
+}
+
+
+	    @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack logo and text vertically */
                 align-items: center;
+                padding: 15px;
+                position: relative; /* Keeps balloon images positioned relative to header */
             }
 
-            .service-card {
-                margin-bottom: 20px;
+		    h1 {
+			margin-left: 100px;
+		}
+
+            header img[alt="balloon"], header img[alt="balloon2"] {
+                top: 10px; /* Keeps balloons in place without overlapping text */
+                width: 120px; /* Resize for smaller screens */
+            }
+
+		     .service-cards {
+        flex-direction: column;  /* Stacks cards vertically */
+        align-items: center;     /* Centers the cards */
+    }
+
+    .service-card {
+        margin-bottom: 20px;    /* Adds spacing between stacked cards */
+    }
+}
+
+            /* Position the first balloon to the left and second balloon to the right */
+            header img[alt="balloon"] {
+                left: 5%; /* Left position for the first balloon */
+            }
+
+            header img[alt="balloon2"] {
+                right: 5%; /* Right position for the second balloon */
+            }
+
+            header p {
+                font-size: 18px;
+            }
+
+            nav {
+                flex-direction: column; /* Stack navigation links vertically */
+                padding: 10px 0;
+            }
+
+            nav a {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+
+            section img {
+                width: 100%; /* Make the image full width on mobile */
+                padding-top: 20px;
+            }
+
+            footer {
+                font-size: 14px;
+                padding: 15px 0;
             }
         }
     </style>
@@ -164,6 +256,8 @@
     <!-- Header Section with Logo -->
     <header>
         <img src="https://i.imgur.com/UXegbeP.png" alt="iTREST Logo">
+		<img src="https://i.imgur.com/4WPoinI.png" alt="balloon">
+		<img src="https://i.imgur.com/Nt0cLn9.png" alt="balloon2">
         <div class="header-text">
             <h1>iTREST</h1>
             <p>Helping Young Entrepreneurs Make Their Dreams a Reality</p>
@@ -178,44 +272,48 @@
         <a href="iTREST 4.html">Contact</a>
     </nav>
 
-    <!-- Services Content -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>iTREST provides tools, mentoring, and guidance for young entrepreneurs to make their ideas a reality.</p>
-        
-        <div class="service-cards">
-            <div class="service-card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>Kidpreneur Starter</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>Empowering children to create their own business. Starting at just £7.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>Business Builder</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>Comprehensive support to help individuals create and market their business successfully. Starting at £15.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="service-card">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <h3>Kidpreneur Marketing Pro</h3>
-                    </div>
-                    <div class="card-back">
-                        <p>Guiding young entrepreneurs in promoting and marketing their businesses effectively. Starting at £10.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
+
+	<section id="services">
+    <h2>Our Services</h2>
+    <p>iTREST provides tools, mentoring, and guidance for young entrepreneurs to make their ideas a reality.</p>
+    <img src="https://mummyandchild.com/wp-content/uploads/2020/06/Entrepreneur-kid.jpg" alt="Entrepreneur Kid">
+    
+    <!-- Service Packs Section -->
+    <h2>iTREST Service Packs</h2>
+		<div class="service-card">
+    <div class="card-inner">
+        <div class="card-front">
+            <h3>Pack 1: Kidpreneur Starter</h3>
+		</div>
+        <div class="card-back">
+            <p>Empowering children to create their own business and bring their ideas to life. <b>Starting at just <u>£7</u></b>.</p>
+		</div>
+    </div>
+</div>
+		<div class="service-card">
+    <div class="card-inner">
+        <div class="card-front">
+            <h3>Pack 2: Business Builder</h3>
+		</div>
+        <div class="card-back">
+            <p>Comprehensive support to help individuals to create and market their business successfully. <b>Starting at <u>£15</u></b>.</p>
+		</div>
+    </div>
+</div>
+		<div class="service-card">
+    <div class="card-inner">
+        <div class="card-front">
+            <h3>Pack 3: Kidpreneur Marketing Pro</h3>
+		</div>
+        <div class="card-back">
+            <p>Guiding young entrepreneurs in promoting and marketing their businesses effectively. <b>Starting at <u>£10</u></b>.</p>
+		</div>
+    </div>
+</div>
+    <p><strong>Let’s turn big dreams into bright realities!</strong></p>
+</section>
+
 
     <!-- Footer -->
     <footer>
