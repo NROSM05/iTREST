@@ -13,6 +13,16 @@
 		h1 { 
 			margin-right: 100px; 
 		}
+
+	    @keyframes float {
+    0%, 100% { transform: translateY(-10px); }
+    50% { transform: translateY(10px); }
+}
+
+img[alt="balloon"], img[alt="balloon2"] {
+    animation: float 3s ease-in-out infinite;
+}
+
 			
         body { 
 			font-family: Courier New, sans-serif; color: #333; 
