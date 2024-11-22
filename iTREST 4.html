@@ -191,14 +191,17 @@ img[alt="balloon"], img[alt="balloon2"] {
 		}
 
             nav {
-                flex-direction: row; /* Stack navigation links vertically */
-                padding: 10px 0;
-            }
+        flex-wrap: nowrap; /* Prevent items from wrapping */
+        overflow-x: auto; /* Enable horizontal scrolling if needed */
+        justify-content: flex-start; /* Align items to the start */
+        gap: 10px; /* Reduce spacing between items */
+    }
 
-            nav a {
-                padding: 12px 20px;
-                font-size: 16px;
-            }
+    nav a {
+        font-size: 14px; /* Reduce font size */
+        padding: 8px 15px; /* Decrease padding for smaller buttons */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
 
             section img {
                 width: 100%; /* Make the image full width on mobile */
