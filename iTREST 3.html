@@ -123,8 +123,11 @@
         }
 
         .service-card:hover .card-inner {
-            transform: rotateY(180deg);
-        }
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg); /* Chrome, Safari */
+    -moz-transform: rotateY(180deg);    /* Firefox */
+}
+
 
         .card-front,
         .card-back {
@@ -174,9 +177,16 @@
 
         /* Floating Animation */
         @keyframes float {
-            0%, 100% { transform: translateY(-10px); }
-            50% { transform: translateY(10px); }
-        }
+    0%, 100% { transform: translateY(-10px); -webkit-transform: translateY(-10px); }
+    50% { transform: translateY(10px); -webkit-transform: translateY(10px); }
+}
+.service-card .card-inner {
+    transition: opacity 0.5s;
+}
+.service-card:hover .card-inner {
+    opacity: 0.5; /* Basic fallback for browsers without 3D support */
+}
+
 
         /* Responsive Design */
         @media (max-width: 768px) {
