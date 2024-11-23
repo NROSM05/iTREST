@@ -12,6 +12,18 @@
             box-sizing: border-box;
         }
 
+	    /* For Safari on mobile devices */
+@media all and (max-width: 768px) {
+    .service-card .card-inner {
+        transition: transform 0.8s ease;
+    }
+
+    .service-card:hover .card-inner {
+        transform: rotate(180deg); /* Use 2D rotate instead of 3D */
+    }
+}
+
+
         body {
             font-family: "Courier New", sans-serif;
             background-color: #E5FFE5;
