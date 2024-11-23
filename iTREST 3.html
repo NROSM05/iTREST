@@ -116,16 +116,15 @@
         }
 
         .card-inner {
+	    position: relative;
             width: 100%;
             height: 100%;
             transform-style: preserve-3d;
-            transition: transform 0.8s;
+            transition: transform 0.8s ease;
         }
 
         .service-card:hover .card-inner {
     transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg); /* Chrome, Safari */
-    -moz-transform: rotateY(180deg);    /* Firefox */
 }
 
 
@@ -135,6 +134,7 @@
             width: 100%;
             height: 100%;
             backface-visibility: hidden;
+	    -webkit-backface-visibility: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -150,7 +150,8 @@
         .card-back {
             background-color: #0d00ff;
             color: white;
-            transform: rotateY(180deg);
+	    transform: rotateY(180deg);
+   	    -webkit-transform: rotateY(180deg);
         }
 
 	    .card {
