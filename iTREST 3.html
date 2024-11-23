@@ -109,49 +109,43 @@
             margin: 20px 0;
         }
 
-        .service-card {
-            width: 200px;
-            height: 200px;
-            perspective: 1000px;
-        }
+.service-card {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
 
-        .card-inner {
-	    position: relative;
-            width: 100%;
-            height: 100%;
-            transform-style: preserve-3d;
-            transition: transform 0.8s ease;
-        }
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+}
 
-        .service-card:hover .card-inner {
+.service-card:hover .card-inner {
     transform: rotateY(180deg);
 }
 
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
 
-        .card-front,
-        .card-back {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            backface-visibility: hidden;
-	    -webkit-backface-visibility: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #0d00ff;
-            border-radius: 10px;
-        }
+.card-back {
+    transform: rotateY(180deg);
+}
 
         .card-front {
             background-color: #66FF66;
             color: #333;
-        }
-
-        .card-back {
-            background-color: #0d00ff;
-            color: white;
-	    transform: rotateY(180deg);
-   	    -webkit-transform: rotateY(180deg);
         }
 
 	    .card {
