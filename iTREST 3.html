@@ -107,14 +107,12 @@
             gap: 20px;
             flex-wrap: wrap;
             margin: 20px 0;
+	    perspective: 1000px;
         }
 
         .service-card {
             width: 200px;
             height: 200px;
-            perspective: 1000px;
-            -webkit-perspective: 1000px; /* Safari fix */
-
         }
 
         .card-inner {
@@ -122,12 +120,10 @@
             height: 100%;
             transform-style: preserve-3d;
             transition: transform 0.8s;
-            -webkit-transform-style: preserve-3d; /* Safari fix */
         }
 
         .service-card:hover .card-inner {
     transform: rotateY(180deg) scale(1.05);
-    -webkit-transform: rotateY(180deg) scale(1.05);
 }
 
         .card-front,
@@ -141,7 +137,6 @@
             justify-content: center;
             border: 2px solid #0d00ff;
             border-radius: 10px;
-		-webkit-backface-visibility: hidden;
         }
 
         .card-front {
@@ -154,13 +149,6 @@
             color: white;
             transform: rotateY(180deg);
         }
-
-	    .card {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1); /* Chrome, Safari */
-    -moz-transform: scale(1.1);    /* Firefox */
-    -ms-transform: scale(1.1);     /* IE */
-}
 
 
         /* Footer Styling */
