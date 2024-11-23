@@ -150,6 +150,19 @@
             transform: rotateY(180deg);
         }
 
+	    .card {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1); /* Chrome, Safari */
+    -moz-transform: scale(1.1);    /* Firefox */
+    -ms-transform: scale(1.1);     /* IE */
+}
+
+	    @keyframes fallback-animation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
         /* Footer Styling */
         footer {
             background-color: #CCFFCC;
